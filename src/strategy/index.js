@@ -65,6 +65,7 @@ Animate.prototype.start = function (propertyName, endPos, duration, easing) {
     }, 19)
 }
 Animate.prototype.step = function () {
+    console.log(111)
     var t = +new Date;        // 取得当前时间     
     if (t >= this.startTime + this.duration) {       // (1)         
         this.update(this.endPos);   // 更新小球的 CSS 属性值        
@@ -76,6 +77,8 @@ Animate.prototype.step = function () {
 Animate.prototype.update = function (pos) { 
     this.dom.style[this.propertyName] = pos + 'px';
 };
-var div = document.getElementById('div'); var animate = new Animate(div);
+var div = document.getElementById('div'); 
+var animate = new Animate(div);
 
-animate.start('left', 500, 1000, 'strongEaseOut'); // animate.start( 'top', 1500, 500, 'strongEaseIn' )
+animate.start('left', 500, 1000, 'strongEaseOut'); 
+// animate.start( 'top', 1500, 500, 'strongEaseIn' )

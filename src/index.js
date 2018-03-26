@@ -54,3 +54,5 @@
     mCost(100);
     mCost()
     console.log(mCost());
+
+// console.log(Vue)
